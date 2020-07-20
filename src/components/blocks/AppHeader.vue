@@ -16,18 +16,18 @@
 
 <style lang="scss" scoped>
   .co-app-header {
-    background-color: $main;
     display: flex;
     padding: 15px 0;
+    background-color: $main;
     border-bottom: 5px solid $cyan-light;
 
     .main-title {
-      color: $white;
       margin: 0;
       width: 100%;
+      color: $white;
+      font-weight: 500;
       text-align: center;
       font-family: 'Lexend Zetta', sans-serif;
-      letter-spacing: 5px;
     }
   }
 </style>
