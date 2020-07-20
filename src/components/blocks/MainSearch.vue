@@ -20,12 +20,12 @@
 
 <style lang="scss" scoped>
   .co-main-search {
-    padding: 30px 0;
+    padding: 40px 0;
     width: 100%;
     text-align: center;
 
     .search-input {
-      width: percentage(9 / 24);
+      width: percentage(7 / 24);
       color: $main;
     }
   }
