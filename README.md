@@ -1,4 +1,4 @@
-# typecast-contact-list
+# typeqast-contact-list
 
 ## Project setup
 ```
