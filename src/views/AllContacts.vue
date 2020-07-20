@@ -1,5 +1,6 @@
 <template>
-  <div class="co-home">
+  <div class="co-all-contacts">
+
   </div>
 </template>
 
@@ -8,7 +9,7 @@
   import { Component } from 'vue-property-decorator';
 
   @Component
-  export default class Home extends Vue {
+  export default class AllContacts extends Vue {
 
   }
 </script>
