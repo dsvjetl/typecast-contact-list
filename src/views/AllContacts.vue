@@ -1,6 +1,7 @@
 <template>
   <div class="co-all-contacts">
     <HeadingMenu/>
+    <MainSearch/>
   </div>
 </template>
 
@@ -8,8 +9,9 @@
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
   import HeadingMenu from '@/components/blocks/HeadingMenu.vue';
+  import MainSearch from '@/components/blocks/MainSearch.vue';
   @Component({
-    components: { HeadingMenu },
+    components: { MainSearch, HeadingMenu },
   })
   export default class AllContacts extends Vue {
 

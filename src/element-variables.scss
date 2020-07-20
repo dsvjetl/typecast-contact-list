@@ -1,0 +1,13 @@
+$--color-primary: $main;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+// # element-ui reset
+
+// input
+.el-input__inner {
+  color: $main;
+  box-shadow: 0 0 20px -5px rgba($black, .3);
+}
