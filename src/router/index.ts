@@ -1,14 +1,18 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/AllContacts.vue';
 
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'Home',
+    name: 'AllContacts',
     component: () => import('../views/AllContacts.vue'),
+  },
+  {
+    path: '/contact-detail',
+    name: 'Contact',
+    component: () => import('../views/ContactDetail.vue'),
   },
 ];
 
