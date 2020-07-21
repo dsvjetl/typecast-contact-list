@@ -12,6 +12,7 @@
   import HeadingMenu from '@/components/blocks/HeadingMenu.vue';
   import MainSearch from '@/components/blocks/MainSearch.vue';
   import ContactsWrapper from '@/components/blocks/ContactsWrapper.vue';
+
   @Component({
     components: { ContactsWrapper, MainSearch, HeadingMenu },
   })

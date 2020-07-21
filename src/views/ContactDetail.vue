@@ -12,10 +12,7 @@
 
       <div class="name-info">
         <div class="name-info__left">
-          <div class="icon-holder">
-            <BackIcon/>
-          </div>
-          <h5 class="contact-name u-1">Addie Hernandez</h5>
+          <h5 class="contact-name u-1"><BackIcon class="icon"/> Addie Hernandez</h5>
         </div>
         <div class="name-info__right">
           <div class="icon-holder">
@@ -30,8 +27,7 @@
       <div class="info-section">
         <div class="info-section__left">
           <div class="email-section">
-            <FaIcon class="contact-icon u-2" icon="envelope"></FaIcon>
-            <p class="key-name u-2">email</p>
+            <p class="key-name u-2"><MailIcon class="icon"/> email</p>
           </div>
         </div>
         <div class="info-section__right">
@@ -42,8 +38,7 @@
       <div class="info-section">
         <div class="info-section__left">
           <div class="email-section">
-            <FaIcon class="contact-icon u-2" icon="phone"></FaIcon>
-            <p class="key-name u-2">Numbers</p>
+            <p class="key-name u-2"><PhoneIcon class="icon"/> numbers</p>
           </div>
         </div>
         <div class="info-section__right">
@@ -72,16 +67,16 @@
 </template>
 
 <script lang="ts">
-  // TODO: Remove normal icons and implement FA-icons
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
   import BackIcon from '@/components/icons/BackIcon.vue';
   import HeartEmptyIcon from '@/components/icons/HeartEmptyIcon.vue';
   import EditIcon from '@/components/icons/EditIcon.vue';
   import MailIcon from '@/components/icons/MailIcon.vue';
+  import PhoneIcon from '@/components/icons/PhoneIcon.vue';
 
   @Component({
-    components: { MailIcon, EditIcon, HeartEmptyIcon, BackIcon },
+    components: { PhoneIcon, MailIcon, EditIcon, HeartEmptyIcon, BackIcon },
   })
   export default class ContactDetail extends Vue {
 
@@ -94,15 +89,15 @@
     display: flex;
 
     .section-left {
-      width: percentage(3 / 14);
+      width: percentage(5 / 14);
     }
 
     .section-right {
-      width: percentage(11 / 14);
+      width: percentage(9 / 14);
     }
 
     .image-holder {
-      $image-size: 100px;
+      $image-size: 185px;
       border: 1px solid $gray;
       border-radius: 50%;
       width: $image-size;
@@ -110,6 +105,10 @@
       margin: 0 auto;
       background: center center no-repeat;
       background-size: cover;
+    }
+
+    .icon {
+      padding-right: 15px;
     }
 
     .name-info {
@@ -148,7 +147,11 @@
       padding: 50px 0 20px 40px;
       align-items: baseline;
       justify-content: space-between;
-      width: percentage(7 / 11);
+      width: percentage(8 / 11);
+
+      &__left {
+        min-width: 125px;
+      }
     }
 
     .email-section {
@@ -178,10 +181,6 @@
 
     .number-value {
       color: $gray;
-    }
-
-    .contact-icon {
-      color: $main;
     }
   }
 </style>

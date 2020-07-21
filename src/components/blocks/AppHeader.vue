@@ -1,15 +1,18 @@
 <template>
   <header class="co-app-header">
-    <h1 class="main-title u-1 --uppercase">typeqast</h1>
+    <MainLogoIcon/>
   </header>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
+  import MainLogoIcon from '@/components/icons/MainLogoIcon.vue';
 
-  @Component
-  export default class  extends Vue {
+  @Component({
+    components: { MainLogoIcon },
+  })
+  export default class AppHeader extends Vue {
 
   }
 </script>
@@ -17,9 +20,10 @@
 <style lang="scss" scoped>
   .co-app-header {
     display: flex;
-    padding: 15px 0;
+    padding: 20px 0;
     background-color: $main;
-    border-bottom: 5px solid $cyan-light;
+    border-bottom: 7px solid $cyan-light;
+    justify-content: center;
 
     .main-title {
       margin: 0;
