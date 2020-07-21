@@ -6,18 +6,28 @@ Vue.use(VueRouter);
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'AllContacts',
-    component: () => import('../views/AllContacts.vue'),
+    name: 'ContactsAll',
+    component: () => import('../views/ContactsAll.vue'),
   },
   {
-    path: '/contact-detail',
-    name: 'ContactDetail',
-    component: () => import('../views/ContactDetail.vue'),
+    path: '/contact-details',
+    name: 'ContactDetails',
+    component: () => import('../views/ContactDetails.vue'),
   },
   {
     path: '/contact-new',
-    name: 'ContactNew.vue',
+    name: 'ContactNew',
     component: () => import('../views/ContactNew.vue'),
+  },
+  {
+    path: '/contact-edit',
+    name: 'ContactEdit',
+    component: () => import('../views/ContactEdit.vue'),
+  },
+  {
+    path: '/contacts-favorites',
+    name: 'ContactsFavorites',
+    component: () => import('../views/ContactsFavorites.vue'),
   },
 ];
 

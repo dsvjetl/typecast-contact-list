@@ -1,5 +1,5 @@
 <template>
-  <div class="co-all-contacts">
+  <div class="co-contact-list-template">
     <HeadingMenu/>
     <MainSearch/>
     <ContactsWrapper/>
@@ -9,20 +9,20 @@
 <script lang="ts">
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
-  import HeadingMenu from '@/components/blocks/HeadingMenu.vue';
-  import MainSearch from '@/components/blocks/MainSearch.vue';
-  import ContactsWrapper from '@/components/blocks/ContactsWrapper.vue';
+  import HeadingMenu from './HeadingMenu.vue';
+  import MainSearch from './MainSearch.vue';
+  import ContactsWrapper from './ContactsWrapper.vue';
 
   @Component({
     components: { ContactsWrapper, MainSearch, HeadingMenu },
   })
-  export default class AllContacts extends Vue {
+  export default class ContactListTemplate extends Vue {
 
   }
 </script>
 
 <style lang="scss" scoped>
-  .co-all-contacts {
+  .co-contact-list-template {
 
   }
 </style>

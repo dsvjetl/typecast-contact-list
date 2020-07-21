@@ -78,7 +78,7 @@
   @Component({
     components: { PhoneIcon, MailIcon, EditIcon, HeartEmptyIcon, BackIcon },
   })
-  export default class ContactDetail extends Vue {
+  export default class ContactDetails extends Vue {
 
   }
 </script>

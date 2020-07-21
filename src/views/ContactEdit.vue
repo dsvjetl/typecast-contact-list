@@ -1,6 +1,8 @@
 <template>
-  <div class="co-contact-new">
-    <ContactManageTemplate/>
+  <div class="co-contact-edit">
+    <ContactManageTemplate
+      :type="'edit'"
+    />
   </div>
 </template>
 
@@ -12,13 +14,13 @@
   @Component({
     components: { ContactManageTemplate },
   })
-  export default class ContactNew extends Vue {
+  export default class ContactEdit extends Vue {
 
   }
 </script>
 
 <style lang="scss" scoped>
-  .co-contact-new {
+  .co-contact-edit {
 
   }
 </style>
