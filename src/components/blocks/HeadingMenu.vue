@@ -32,7 +32,7 @@
 
 <style lang="scss" scoped>
   .co-heading-menu {
-    padding: 30px 0;
+    padding: 50px 0;
     display: flex;
     border-bottom: 1px solid $main;
     margin: 0 percentage(2 / 24);

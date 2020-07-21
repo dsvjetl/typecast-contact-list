@@ -18,7 +18,7 @@
         class="image-wrapper"
         style="background-image: url('https://s3-eu-west-1.amazonaws.com/fhrmp/attachments/Avatar/0000016024.s-46572133892bf15db8f9708d8ef40868.x-600x600.jpg')"
       ></div>
-      <h5 class="contact-name u-3">Dava Svjetli</h5>
+      <h5 class="contact-name u-2">Addie Hernandez</h5>
     </div>
 
   </div>
@@ -30,6 +30,7 @@
   import HeartEmptyIcon from '@/components/icons/HeartEmptyIcon.vue';
   import EditIcon from '@/components/icons/EditIcon.vue';
   import TrashIcon from '@/components/icons/TrashIcon.vue';
+
   @Component({
     components: { TrashIcon, HeartEmptyIcon, EditIcon },
   })
@@ -45,7 +46,7 @@
     border-radius: 3px;
     text-align: center;
     display: flex;
-    padding: 20px 0;
+    padding: 25px 0;
     @include transition-all;
 
     &:hover {
@@ -64,12 +65,13 @@
     }
 
     .image-wrapper {
+      $image-size: 60px;
+      height: $image-size;
+      width: $image-size;
       border-radius: 50%;
       border: 2px solid $gray;
       background: center center no-repeat;
       background-size: cover;
-      height: 50px;
-      width: 50px;
       margin: auto;
     }
 
@@ -82,24 +84,24 @@
     .edit-wrapper,
     .trash-wrapper {
       &:hover {
-        svg {
-          color: $main;
+        .g-fill {
+          fill: $main !important;
         }
       }
     }
 
     .heart-empty-wrapper {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 15px;
+      left: 15px;
       width: 15px;
       height: 15px;
     }
 
     .edit-wrapper {
       position: absolute;
-      top: 10px;
-      right: 35px;
+      top: 15px;
+      right: 50px;
       width: 15px;
       height: 15px;
       opacity: 0;
@@ -108,8 +110,8 @@
 
     .trash-wrapper {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 13px;
+      right: 15px;
       width: 15px;
       height: 15px;
       opacity: 0;
