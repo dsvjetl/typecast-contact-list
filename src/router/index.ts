@@ -11,8 +11,13 @@ const routes: RouteConfig[] = [
   },
   {
     path: '/contact-detail',
-    name: 'Contact',
+    name: 'ContactDetail',
     component: () => import('../views/ContactDetail.vue'),
+  },
+  {
+    path: '/contact-new',
+    name: 'ContactNew.vue',
+    component: () => import('../views/ContactNew.vue'),
   },
 ];
 

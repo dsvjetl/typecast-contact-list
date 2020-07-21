@@ -1,16 +1,22 @@
 <template>
-  <button class="co-app-button">
+  <button
+    class="co-app-button"
+    :class="[
+      {'is-cancel': type === 'cancel'},
+      {'is-save': type === 'save'},
+    ]"
+  >
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
   import Vue from 'vue';
-  import { Component } from 'vue-property-decorator';
+  import { Component, Prop } from 'vue-property-decorator';
 
   @Component
   export default class AppButton extends Vue {
-
+    @Prop({default: ''}) public type!: string;
   }
 </script>
 
@@ -29,6 +35,21 @@
 
     &.is-active {
       color: $main;
+    }
+
+    &.is-cancel,
+    &.is-save {
+      color: $white;
+      padding: 10px 60px;
+      border-radius: 28.5px;
+    }
+
+    &.is-cancel {
+      background-color: $gray;
+    }
+
+    &.is-save {
+      background-color: $main;
     }
   }
 </style>
