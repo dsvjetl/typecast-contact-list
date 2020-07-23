@@ -2,7 +2,7 @@
   <div class="co-contacts-wrapper">
 
     <div class="contact-card-wrapper">
-      <ContactCard/>
+      <ContactNewCard/>
     </div>
     <div class="contact-card-wrapper">
       <ContactCard/>
@@ -27,8 +27,9 @@
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
   import ContactCard from '@/components/blocks/ContactCard.vue';
+  import ContactNewCard from '@/components/blocks/ContactNewCard.vue';
   @Component({
-    components: { ContactCard },
+    components: { ContactNewCard, ContactCard },
   })
   export default class ContactsWrapper extends Vue {
 
@@ -41,6 +42,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 3%;
     grid-row-gap: 10%;
+    grid-auto-rows: 1fr;
     padding: 0 percentage(4 / 24);
+
+    .contact-card-wrapper {
+      position: relative;
+    }
   }
 </style>
