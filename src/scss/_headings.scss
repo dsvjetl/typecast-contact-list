@@ -1,0 +1,46 @@
+// heading sizes
+.u-1 {
+  font-size: clamp(1.4rem, 2vw, 3rem);
+  font-weight: 400;
+}
+
+.u-2 {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-weight: 400;
+}
+
+.u-3 {
+  font-size: clamp(.8rem, .9vw, 1rem);
+  font-weight: 400;
+}
+
+// font weight
+.--bold-400 {
+  font-weight: 400;
+}
+
+.--bold-500 {
+  font-weight: 500;
+}
+
+.--bold-600 {
+  font-weight: 600;
+}
+
+// text align
+.--center {
+  text-align: center;
+}
+
+.--right {
+  text-align: right;
+}
+
+// text decoration
+.--uppercase {
+  text-transform: uppercase;
+}
+
+.--lowercase {
+  text-transform: lowercase;
+}
