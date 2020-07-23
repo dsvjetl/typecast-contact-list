@@ -33,6 +33,11 @@
     height: calc(100% - 52px);
     @include transition-all;
 
+    @include media('>=phone', '<tablet') {
+      height: auto;
+      padding: 20px 0;
+    }
+
     &:hover {
       border: 1px dashed $gray;
       cursor: pointer;
@@ -40,11 +45,23 @@
 
     .inner-wrapper {
       margin: auto;
+      align-items: center;
+
+      @include media('>=phone', '<tablet') {
+        display: flex;
+        margin: initial;
+        padding-left: 20px;
+      }
     }
 
     .cta-text {
       color: $cyan-light;
       margin: 15px 0 0;
+
+      @include media('>=phone', '<tablet') {
+        margin: 0;
+        padding-left: 20px;
+      }
     }
 
     .plus-icon {
