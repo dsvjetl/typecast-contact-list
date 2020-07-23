@@ -2,7 +2,7 @@
   <div class="co-contact-new-card">
     <div class="inner-wrapper">
       <div class="icon-holder">
-        <PlusIcon/>
+        <PlusIcon class="plus-icon"/>
       </div>
       <h5 class="cta-text u-3">Add new</h5>
     </div>
@@ -44,7 +44,11 @@
 
     .cta-text {
       color: $cyan-light;
-      margin: 10px 0 0;
+      margin: 15px 0 0;
+    }
+
+    .plus-icon {
+      transform: scale(2);
     }
   }
 </style>
