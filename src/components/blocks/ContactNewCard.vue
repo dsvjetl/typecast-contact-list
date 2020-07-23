@@ -67,5 +67,12 @@
     .plus-icon {
       transform: scale(2);
     }
+
+    .icon-holder {
+      @include media('>=phone', '<tablet') {
+        position: relative;
+        top: -2px;
+      }
+    }
   }
 </style>

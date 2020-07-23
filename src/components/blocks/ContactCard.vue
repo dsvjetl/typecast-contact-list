@@ -49,10 +49,18 @@
     padding: 25px 0;
     @include transition-all;
 
+    @include media('>=phone', '<tablet') {
+      padding: 7px 15px;
+    }
+
     &:hover {
       border: 1px solid $main;
       cursor: pointer;
       transform: scale(1.02);
+
+      @include media('>=phone', '<desktop') {
+        transform: scale(1);
+      }
 
       .edit-wrapper,
       .trash-wrapper {
@@ -62,6 +70,12 @@
 
     .contact-info-wrapper {
       margin: auto;
+
+      @include media('>=phone', '<tablet') {
+        display: flex;
+        margin: unset;
+        align-items: center;
+      }
     }
 
     .image-wrapper {
@@ -73,11 +87,24 @@
       background: center center no-repeat;
       background-size: cover;
       margin: auto;
+
+      @include media('>=phone', '<tablet') {
+        $image-size: 46px;
+        height: $image-size;
+        width: $image-size;
+      }
     }
 
     .contact-name {
-      margin: 15px 0 0;
+      margin: 10px 0 0;
       color: $gray;
+      max-width: 145px;
+      text-align: left;
+
+      @include media('>=phone', '<tablet') {
+        padding-left: 15px;
+        margin: 0;
+      }
     }
 
     .heart-empty-wrapper,
@@ -97,6 +124,12 @@
       left: 15px;
       width: 15px;
       height: 15px;
+
+      @include media('>=phone', '<tablet') {
+        top: calc(50% - 8px);
+        left: auto;
+        right: 90px;
+      }
     }
 
     .edit-wrapper {
@@ -107,6 +140,12 @@
       height: 15px;
       opacity: 0;
       @include transition-all;
+
+      @include media('>=phone', '<tablet') {
+        opacity: 1;
+        top: calc(50% - 8px);
+        right: 53px;
+      }
     }
 
     .trash-wrapper {
@@ -117,6 +156,11 @@
       height: 15px;
       opacity: 0;
       @include transition-all;
+
+      @include media('>=phone', '<tablet') {
+        opacity: 1;
+        top: calc(50% - 9px);
+      }
     }
   }
 </style>
