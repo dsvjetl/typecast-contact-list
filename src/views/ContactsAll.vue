@@ -1,6 +1,7 @@
 <template>
   <div class="co-contacts-all">
     <ContactListTemplate/>
+    <Modal/>
   </div>
 </template>
 
@@ -8,9 +9,10 @@
   import Vue from 'vue';
   import { Component } from 'vue-property-decorator';
   import ContactListTemplate from '@/components/blocks/ContactListTemplate.vue';
+  import Modal from '@/components/blocks/Modal.vue';
 
   @Component({
-    components: { ContactListTemplate },
+    components: { Modal, ContactListTemplate },
   })
   export default class AllContacts extends Vue {
 

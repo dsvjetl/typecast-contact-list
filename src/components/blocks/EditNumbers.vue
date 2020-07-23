@@ -50,12 +50,12 @@
         <AppButton
           :type="'cancel'"
         >
-          <span>Cancel</span>
+          <span class="u-2">Cancel</span>
         </AppButton>
         <AppButton
-          :type="'save'"
+          :type="'positive'"
         >
-          <span>Save</span>
+          <span class="u-2">Save</span>
         </AppButton>
       </div>
     </div>

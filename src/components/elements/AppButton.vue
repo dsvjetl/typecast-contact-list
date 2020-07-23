@@ -3,7 +3,7 @@
     class="co-app-button"
     :class="[
       {'is-cancel': type === 'cancel'},
-      {'is-save': type === 'save'},
+      {'is-save': type === 'positive'},
     ]"
   >
     <slot/>
