@@ -37,7 +37,8 @@
     components: { AppButton },
   })
   export default class Modal extends Vue {
-    public showModal: boolean = true;
+    // TODO change to true
+    public showModal: boolean = false;
 
     public handleNegativeClick(): void {
       this.changeModalDisplay(false);

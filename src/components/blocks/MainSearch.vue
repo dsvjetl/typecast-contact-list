@@ -24,9 +24,21 @@
     width: 100%;
     text-align: center;
 
+    @include media('>=phone', '<tablet') {
+      padding: 25px 0;
+    }
+
     .search-input {
       width: percentage(7 / 24);
       color: $main;
+
+      @include media('>=tablet', '<desktop') {
+        width: percentage(10 / 24);
+      }
+
+      @include media('>=phone', '<tablet') {
+        width: percentage(22 / 24);
+      }
     }
   }
 </style>
