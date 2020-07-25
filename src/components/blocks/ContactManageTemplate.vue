@@ -1,6 +1,10 @@
 <template>
   <div class="co-contact-manage-template">
 
+    <div class="heading-responsive">
+      <BackIcon/>
+    </div>
+
     <div class="inner-wrapper">
 
       <div class="inner-wrapper__left">
@@ -70,30 +74,61 @@
 
 <style lang="scss" scoped>
   .co-contact-manage-template {
-    padding: 60px percentage(3 / 24);
+
+    .heading-responsive {
+      display: none;
+      padding: 20px 30px;
+      border-bottom: 1px solid $gray;
+
+      @include media('>=phone', '<desktop') {
+        display: block;
+      }
+    }
 
     .inner-wrapper {
       display: flex;
+      padding: 60px percentage(3 / 24);
+
+      @include media('>=phone', '<desktop') {
+        display: block;
+        padding: 0 percentage(1 / 24);
+      }
 
       &__left {
         width: percentage(7 / 18);
+
+        @include media('>=phone', '<desktop') {
+          width: 100%;
+          border-bottom: 1px solid $main;
+          padding: 20px 0;
+        }
       }
 
       &__right {
         width: percentage(11 / 14);
+
+        @include media('>=phone', '<desktop') {
+          width: 100%;
+        }
       }
     }
 
     .image-wrapper {
       $image-size: 185px;
-      display: flex;
       width: $image-size;
       height: $image-size;
+      display: flex;
       border: 3px solid $gray;
       border-radius: 50%;
       margin: 0 auto;
-      background: $main center center no-repeat;
+      background: $cyan-light center center no-repeat;
       background-size: cover;
+
+      @include media('>=phone', '<desktop') {
+        $image-size: 155px;
+        width: $image-size;
+        height: $image-size;
+      }
     }
 
     .upload-icon {
@@ -108,6 +143,10 @@
       &:first-child {
         display: flex;
         justify-content: space-between;
+
+        @include media('>=phone', '<desktop') {
+          display: none;
+        }
       }
 
       &:last-child {
@@ -139,6 +178,10 @@
 
     .label-input {
       width: 50%;
+
+      @include media('>=phone', '<desktop') {
+        width: 100%;
+      }
     }
   }
 </style>
