@@ -12,7 +12,10 @@
 
       <div class="name-info">
         <div class="name-info__left">
-          <h5 class="contact-name u-1"><BackIcon class="icon"/> Addie Hernandez</h5>
+          <h5 class="contact-name u-1">
+            <BackIcon class="icon"/>
+            <span class="contact-name-text">Addie Hernandez</span>
+          </h5>
         </div>
         <div class="name-info__right">
           <div class="icon-holder">
@@ -24,10 +27,23 @@
         </div>
       </div>
 
+      <div class="info-section info-section--responsive">
+        <div
+          class="image-holder"
+          style="background-image: url('https://s3-eu-west-1.amazonaws.com/fhrmp/attachments/Avatar/0000016024.s-46572133892bf15db8f9708d8ef40868.x-600x600.jpg')"
+        ></div>
+        <h5 class="contact-name u-1">
+          Addie Hernandez
+        </h5>
+      </div>
+
       <div class="info-section">
         <div class="info-section__left">
           <div class="email-section">
-            <p class="key-name u-2"><MailIcon class="icon"/> email</p>
+            <p class="key-name u-2">
+              <MailIcon class="icon"/>
+              email
+            </p>
           </div>
         </div>
         <div class="info-section__right">
@@ -38,7 +54,10 @@
       <div class="info-section">
         <div class="info-section__left">
           <div class="email-section">
-            <p class="key-name u-2"><PhoneIcon class="icon"/> numbers</p>
+            <p class="key-name u-2">
+              <PhoneIcon class="icon"/>
+              numbers
+            </p>
           </div>
         </div>
         <div class="info-section__right">
@@ -88,12 +107,25 @@
     padding: 30px percentage(5 / 24);
     display: flex;
 
+    @include media('>=phone', '<desktop') {
+      display: block;
+      padding: 0 percentage(0 / 24);
+    }
+
     .section-left {
       width: percentage(5 / 14);
+
+      @include media('>=phone', '<desktop') {
+        display: none;
+      }
     }
 
     .section-right {
       width: percentage(9 / 14);
+
+      @include media('>=phone', '<desktop') {
+        width: percentage(14 / 14);
+      }
     }
 
     .image-holder {
@@ -116,6 +148,10 @@
       padding: 15px 0;
       display: flex;
 
+      @include media('>=phone', '<desktop') {
+        padding: 15px 30px 15px;
+      }
+
       &__left {
         display: flex;
         width: 85%;
@@ -127,6 +163,10 @@
         width: 15%;
         justify-content: space-between;
         align-items: center;
+
+        @include media('>=phone', '<desktop') {
+          width: 75px;
+        }
       }
     }
 
@@ -140,6 +180,16 @@
       margin: 0;
       color: $gray;
       padding-left: 15px;
+
+      @include media('>=phone', '<desktop') {
+        padding-left: 0;
+      }
+    }
+
+    .contact-name-text {
+      @include media('>=phone', '<desktop') {
+        display: none;
+      }
     }
 
     .info-section {
@@ -149,8 +199,37 @@
       justify-content: space-between;
       width: percentage(8 / 11);
 
+      @include media('>=phone', '<desktop') {
+        display: block;
+      }
+
       &__left {
         min-width: 125px;
+      }
+
+      &--responsive {
+        display: none;
+        padding: 0;
+        margin: 0 percentage(1 / 24);
+        width: auto;
+        border-bottom: 1px solid $main;
+        justify-content: normal;
+        align-items: center;
+
+        @include media('>=phone', '<desktop') {
+          display: flex;
+        }
+
+        .image-holder {
+          height: 55px;
+          width: 55px;
+          border: 3px solid $gray;
+          margin: 20px 0 20px 0;
+        }
+
+        .contact-name {
+          padding-left: 20px;
+        }
       }
     }
 
@@ -162,6 +241,10 @@
       color: $main;
       margin: 0;
       padding: 0 15px;
+
+      @include media('>=phone', '<desktop') {
+        padding: 0 0 10px;
+      }
     }
 
     .key-value {
@@ -177,6 +260,10 @@
     .number-name {
       color: $gray;
       padding: 0 15px;
+
+      @include media('>=phone', '<desktop') {
+        padding: 0;
+      }
     }
 
     .number-value {
