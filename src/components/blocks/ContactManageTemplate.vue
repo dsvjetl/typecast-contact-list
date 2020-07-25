@@ -3,6 +3,9 @@
 
     <div class="heading-responsive">
       <BackIcon/>
+      <TrashIcon
+        v-if="type === 'edit'"
+      />
     </div>
 
     <div class="inner-wrapper">
@@ -81,7 +84,8 @@
       border-bottom: 1px solid $gray;
 
       @include media('>=phone', '<desktop') {
-        display: block;
+        display: flex;
+        justify-content: space-between;
       }
     }
 
