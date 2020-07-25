@@ -37,6 +37,10 @@
     border-bottom: 1px solid $main;
     margin: 0 percentage(2 / 24);
 
+    @include media('>=phone', '<tablet') {
+      padding: 15px 0;
+    }
+
     .buttons-wrapper {
       display: flex;
       margin: auto;

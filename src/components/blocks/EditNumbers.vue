@@ -104,8 +104,17 @@
       justify-content: space-between;
       padding-bottom: 30px;
 
+      @include media('>=phone', '<desktop') {
+        display: block;
+      }
+
       &__left {
         width: 50%;
+
+        @include media('>=phone', '<desktop') {
+          width: 100%;
+          padding-bottom: 10px;
+        }
       }
 
       &__right {
